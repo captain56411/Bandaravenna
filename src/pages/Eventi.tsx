@@ -32,7 +32,7 @@ const Eventi: React.FC = () => {
   const events: Event[] = getFilteredEvents();
 
   return (
-    <div className="eventi-page">
+    <div className="eventi-page no-select">
       {/* Hero Section */}
       <section className="eventi-hero">
         <div className="hero-background">
