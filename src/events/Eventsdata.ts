@@ -2,6 +2,10 @@
 // EVENTI DELLA BANDA CITTADINA DI RAVENNA
 // ========================================
 
+// Import delle immagini
+import natale2025 from '../assets/photo_concerts/natale2025.jpg';
+
+
 export interface Event {
   id: number;
   title: string;
@@ -23,7 +27,7 @@ export const events: Event[] = [
     date: "2025-12-22",
     time: "21:00",
     location: "Teatro Alighieri, Ravenna",
-    image: "../assets/photo_concerts/natale2025.jpg",
+    image: natale2025,
     price: "gratuito",
     description: "Il tradizionale concerto natalizio della Banda Cittadina con un repertorio di brani classici e moderni per celebrare le festività.",
     status: "upcoming",
@@ -31,13 +35,13 @@ export const events: Event[] = [
   },
   {
     id: 2,
-    title: "Commemorazione davanti al monumento dei caduti",
-    date: "2025-11-04",
+    title: "Commemorazione del 4 Novembre",
+    date: "2025-11-21",
     time: "9:00",
-    location: "Viale Farini, Ravenna",
-    image: "../assets/photo_conerts/natale2025.jpg",
+    location: "Monumento ai Caduti, Viale Farini, Ravenna",
+    image: natale2025,
     price: "gratuito",
-    description: "Il 4 novembre 1918 segna la fine della Prima Guerra Mondiale per l’Italia, con la firma dell’armistizio di Villa Giusti tra l’Italia e l’Impero Austro-Ungarico",
+    description: "Celebriamo l'arrivo della primavera con un concerto all'aperto in piazza. Musica, allegria e tradizione!",
     status: "upcoming",
     featured: false
   },
@@ -45,16 +49,17 @@ export const events: Event[] = [
   // EVENTI PASSATI
   {
     id: 3,
-    title: "Concerto con Sonia Davis",
+    title: "Concerto con Sonia Davis!",
     date: "2025-10-25",
-    time: "20:45",
-    location: "Teatro Monti Alfonsine",
-    image: "../assets/photo_conerts/natale2025.jpg",
-    price: "€ 15",
-    description: "Sonia Davis ha cantato con la nostra banda in un evento speciale che ha unito talento vocale e musica strumentale.",
+    time: "21:00",
+    location: "Teatro Comunale di Alfonsine",
+    image: natale2025,
+    price: "15€",
+    description: "La grande cantante Sonia Davis si esibisce con la Banda Cittadina di Ravenna in un concerto imperdibile!",
     status: "past",
     featured: false
   },
+
 ];
 
 // Funzioni helper per filtrare gli eventi
