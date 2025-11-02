@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
       <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-container">
           {/* Logo e Brand */}
-          <a className="navbar-brand" href="/home">
+          <a className="navbar-brand" href="/">
   <div className="logo-container">
     <div className="logo-icon">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
