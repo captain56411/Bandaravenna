@@ -23,7 +23,7 @@ export const events: Event[] = [
     date: "2025-12-22",
     time: "21:00",
     location: "Teatro Alighieri, Ravenna",
-    image: "../assets/photo_conerts/natale2025.jpg",
+    image: "../assets/photo_concerts/natale2025.jpg",
     price: "gratuito",
     description: "Il tradizionale concerto natalizio della Banda Cittadina con un repertorio di brani classici e moderni per celebrare le festività.",
     status: "upcoming",
