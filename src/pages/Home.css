@@ -334,7 +334,7 @@
 /* Storia Timeline Section */
 .storia-section {
   position: relative;
-  background-image: url('../assets/photos/la_nostra_storia.jpg');
+  background-image: url('../assets/photo_home/la_nostra_storia.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Effetto parallax */
