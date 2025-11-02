@@ -41,7 +41,7 @@ export const events: Event[] = [
     location: "Monumento ai Caduti, Viale Farini, Ravenna",
     image: natale2025,
     price: "gratuito",
-    description: "Celebriamo l'arrivo della primavera con un concerto all'aperto in piazza. Musica, allegria e tradizione!",
+    description: "Il 4 novembre 1918 segna la fine della Prima Guerra Mondiale per l’Italia, con la firma dell’armistizio di Villa Giusti tra l’Italia e l’Impero Austro-Ungarico.",
     status: "upcoming",
     featured: false
   },
