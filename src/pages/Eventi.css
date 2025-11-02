@@ -1,0 +1,617 @@
+/* ========================================
+   EVENTI PAGE - Premium Rich Design
+   ======================================== */
+
+.eventi-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 1) 0%,
+    rgba(30, 41, 59, 0.95) 50%,
+    rgba(15, 23, 42, 1) 100%
+  );
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.eventi-hero {
+  position: relative;
+  background-image: url('../assets/photos/eventi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Effetto parallax */
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(201, 48, 44, 0.15), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(245, 158, 11, 0.12), transparent 50%);
+  filter: blur(60px);
+  animation: heroGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orbFloat 15s ease-in-out infinite;
+}
+
+.hero-orb-1 {
+  top: -10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.2), transparent 70%);
+  animation-delay: 0s;
+}
+
+.hero-orb-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(201, 48, 44, 0.15), transparent 70%);
+  animation-delay: 7s;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #f1f5f9 0%, #fbbf24 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  animation: titleFadeIn 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-decoration {
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f59e0b, #fbbf24, #f59e0b, transparent);
+  background-size: 200% 100%;
+  margin: 0 auto 3rem;
+  border-radius: 2px;
+  animation: decorationFlow 4s linear infinite, decorFadeIn 1s ease-out 0.4s backwards;
+  box-shadow: 
+    0 0 20px rgba(245, 158, 11, 0.5),
+    0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+@keyframes decorationFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes decorFadeIn {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(203, 213, 225, 0.9);
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  animation: subtitleFadeIn 1s ease-out 0.6s backwards;
+}
+
+@keyframes subtitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   FILTERS SECTION
+   ======================================== */
+
+.eventi-filters {
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: rgba(203, 213, 225, 0.9);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn:hover {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+  transform: translateY(-2px);
+  color: #fbbf24;
+  box-shadow: 
+    0 6px 20px rgba(245, 158, 11, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.filter-btn-active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.12));
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fbbf24;
+  box-shadow: 
+    0 4px 16px rgba(245, 158, 11, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.filter-icon {
+  font-size: 1.125rem;
+}
+
+/* ========================================
+   EVENTS GRID
+   ======================================== */
+
+.eventi-grid-section {
+  padding: 4rem 0 8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2.5rem;
+}
+
+/* ========================================
+   EVENT CARD - Premium Design
+   ======================================== */
+
+.event-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  animation: cardFadeIn 0.7s ease-out forwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.4),
+    rgba(255, 255, 255, 0.1),
+    rgba(201, 48, 44, 0.4)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(245, 158, 11, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.event-card:hover::before {
+  opacity: 1;
+}
+
+/* Featured Card */
+.event-card-featured {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+}
+
+/* Past Event Card */
+.event-card-past {
+  opacity: 0.75;
+}
+
+.event-card-past:hover {
+  opacity: 1;
+}
+
+/* ========================================
+   EVENT IMAGE
+   ======================================== */
+
+.event-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.08);
+}
+
+/* Past Event Overlay */
+.event-card-past .event-image {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.event-past-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(15, 23, 42, 0.95) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.past-label {
+  padding: 0.75rem 1.5rem;
+  background: rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 100px;
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Featured Badge */
+.event-featured-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.95));
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+}
+
+/* ========================================
+   EVENT CONTENT
+   ======================================== */
+
+.event-content {
+  padding: 2rem;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.event-card:hover .event-title {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.event-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.event-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(148, 163, 184, 0.95);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.event-location {
+  flex: 1 1 100%;
+}
+
+.info-icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.event-description {
+  color: rgba(203, 213, 225, 0.9);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  margin: 1.5rem 0;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================
+   EVENT FOOTER
+   ======================================== */
+
+.event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.event-price-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.price-free {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+.event-card:hover .price-free {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+  transform: scale(1.05);
+}
+
+.price-paid {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+.event-card:hover .price-paid {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: scale(1.05);
+}
+
+/* ========================================
+   EMPTY STATE
+   ======================================== */
+
+.empty-state {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 2rem;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.empty-state p {
+  font-size: 1.125rem;
+  color: rgba(148, 163, 184, 0.8);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventi-hero {
+    padding: 8rem 0 4rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .filter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .event-image-wrapper {
+    height: 220px;
+  }
+
+  .event-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventi-hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .hero-badge {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .event-card {
+    border-radius: 24px;
+  }
+
+  .event-image-wrapper {
+    height: 200px;
+  }
+
+  .event-info-row {
+    gap: 1rem;
+  }
+
+  .event-title {
+    font-size: 1.25rem;
+  }
+}

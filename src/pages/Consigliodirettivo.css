@@ -1,0 +1,738 @@
+/* ========================================
+   CONSIGLIO DIRETTIVO PAGE - Premium Design
+   ======================================== */
+
+.consiglio-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 1) 0%,
+    rgba(30, 41, 59, 0.95) 50%,
+    rgba(15, 23, 42, 1) 100%
+  );
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.consiglio-hero {
+  padding: 10rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(201, 48, 44, 0.15), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(212, 175, 55, 0.12), transparent 50%);
+  filter: blur(60px);
+  animation: heroGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orbFloat 15s ease-in-out infinite;
+}
+
+.hero-orb-1 {
+  top: -10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2), transparent 70%);
+  animation-delay: 0s;
+}
+
+.hero-orb-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(201, 48, 44, 0.15), transparent 70%);
+  animation-delay: 7s;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+}
+
+/* Floating Notes */
+.floating-note {
+  position: absolute;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #d4af37, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.4));
+  animation: noteFloat 10s ease-in-out infinite;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.note-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.note-2 {
+  top: 60%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.note-3 {
+  bottom: 30%;
+  left: 25%;
+  animation-delay: 6s;
+}
+
+@keyframes noteFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(15deg);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(212, 175, 55, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 100px;
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 4px 16px rgba(212, 175, 55, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: badgeFadeIn 0.6s ease-out;
+}
+
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+  animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #f1f5f9 0%, #d4af37 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  animation: titleFadeIn 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-decoration {
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #d4af37, #fbbf24, #d4af37, transparent);
+  background-size: 200% 100%;
+  margin: 0 auto 3rem;
+  border-radius: 2px;
+  animation: decorationFlow 4s linear infinite, decorFadeIn 1s ease-out 0.4s backwards;
+  box-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.5),
+    0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+@keyframes decorationFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes decorFadeIn {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(203, 213, 225, 0.9);
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  animation: subtitleFadeIn 1s ease-out 0.6s backwards;
+}
+
+.hero-subtitle strong {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+@keyframes subtitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   PRESIDENTE SECTION
+   ======================================== */
+
+.presidente-section {
+  padding: 4rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.presidente-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  border-radius: 40px;
+  padding: 4rem 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 8px 24px rgba(212, 175, 55, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.1);
+  animation: cardFadeIn 0.8s ease-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animated border */
+.presidente-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 40px;
+  padding: 3px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.8),
+    rgba(255, 255, 255, 0.2),
+    rgba(212, 175, 55, 0.8)
+  );
+  background-size: 300% 300%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderShine 5s linear infinite;
+}
+
+@keyframes borderShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.presidente-crown {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.6));
+  animation: crownFloat 3s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(5deg);
+  }
+}
+
+.presidente-decoration {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 8rem;
+  opacity: 0.05;
+  transform: rotate(15deg);
+}
+
+.presidente-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.presidente-badge {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 100px;
+  color: #d4af37;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+
+.presidente-name {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #d4af37, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.presidente-divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.presidente-role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(203, 213, 225, 0.9);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.presidente-bio {
+  font-size: 1.125rem;
+  color: rgba(203, 213, 225, 0.85);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* ========================================
+   MEMBERS SECTION
+   ======================================== */
+
+.members-section,
+.revisori-section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #f1f5f9, #d4af37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  animation: cardSlideIn 0.7s ease-out forwards;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 28px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.4),
+    rgba(255, 255, 255, 0.1),
+    rgba(212, 175, 55, 0.4)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 8px 24px rgba(212, 175, 55, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.member-card:hover::before {
+  opacity: 1;
+}
+
+.member-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3));
+  transition: transform 0.4s ease;
+}
+
+.member-card:hover .member-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+}
+
+.member-card:hover .member-name {
+  background: linear-gradient(135deg, #d4af37, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: rgba(148, 163, 184, 0.95);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================
+   REVISORI SECTION
+   ======================================== */
+
+.revisori-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.revisore-card {
+  background: linear-gradient(
+    135deg,
+    rgba(148, 163, 184, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1.5px solid rgba(148, 163, 184, 0.2);
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 10px 35px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  animation: cardSlideIn 0.7s ease-out forwards;
+}
+
+.revisore-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    0 6px 20px rgba(148, 163, 184, 0.2);
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+.revisore-icon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 4px 10px rgba(148, 163, 184, 0.3));
+  transition: transform 0.4s ease;
+}
+
+.revisore-card:hover .revisore-icon {
+  transform: scale(1.12);
+}
+
+.revisore-name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.625rem;
+  letter-spacing: -0.02em;
+}
+
+.revisore-role {
+  font-size: 0.9375rem;
+  color: rgba(148, 163, 184, 0.9);
+  font-weight: 500;
+}
+
+/* ========================================
+   MANDATE SECTION
+   ======================================== */
+
+.mandate-section {
+  padding: 4rem 0 8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.mandate-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.1) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1.5px solid rgba(245, 158, 11, 0.3);
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: cardFadeIn 0.9s ease-out 0.3s backwards;
+}
+
+.mandate-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 6px 16px rgba(245, 158, 11, 0.4));
+}
+
+.mandate-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.mandate-text {
+  font-size: 1.125rem;
+  color: rgba(203, 213, 225, 0.9);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.mandate-years {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .consiglio-hero {
+    padding: 8rem 0 4rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .presidente-card {
+    padding: 3rem 2rem;
+    border-radius: 32px;
+  }
+
+  .presidente-name {
+    font-size: 2.25rem;
+  }
+
+  .members-grid,
+  .revisori-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mandate-years {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .consiglio-hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .presidente-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 28px;
+  }
+
+  .presidente-name {
+    font-size: 2rem;
+  }
+
+  .member-card,
+  .revisore-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .mandate-card {
+    padding: 2.5rem 2rem;
+  }
+}
