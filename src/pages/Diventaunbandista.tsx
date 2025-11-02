@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DiventaUnBandista.css';
+import './Diventaunbandista.css';
 
 interface Instrument {
   name: string;
