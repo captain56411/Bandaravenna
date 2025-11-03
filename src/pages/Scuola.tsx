@@ -44,7 +44,7 @@ export const Scuola: React.FC = () => {
 
   // Dati degli strumenti con i docenti
   const instruments = [
-  { name: 'Clarinetto', teacher: 'Vincenzo Libbra', image: fotoClarinet },
+  { name: 'Clarinetto', teacher: 'Vincenzo Libra', image: fotoClarinet },
   { name: 'Sassofono', teacher: 'Stefano Fariselli', image: fotoSax },
   { name: 'Flauto', teacher: 'Alessia Amadio', image: fotoFlauto },
   { name: 'Batteria', teacher: 'Guido Casadio', image: fotoBatteria },
