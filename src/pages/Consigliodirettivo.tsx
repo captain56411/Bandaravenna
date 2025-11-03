@@ -28,7 +28,7 @@ const ConsiglioDirettivo: React.FC = () => {
   ];
 
   return (
-    <div className="consiglio-page">
+    <div className="consiglio-page no-select">
       {/* Hero Section */}
       <section className="consiglio-hero">
         <div className="hero-background">

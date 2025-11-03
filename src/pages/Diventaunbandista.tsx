@@ -76,7 +76,7 @@ const DiventaUnBandista: React.FC = () => {
   ];
 
   return (
-    <div className="bandista-page">
+    <div className="bandista-page no-select">
       {/* Hero Section */}
       <section className="bandista-hero">
         <div className="hero-background">
