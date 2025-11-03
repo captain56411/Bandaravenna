@@ -48,7 +48,7 @@ const ConsiglioDirettivo: React.FC = () => {
             <h1 className="hero-title">Consiglio Direttivo</h1>
             <div className="title-decoration"></div>
             <p className="hero-subtitle">
-              In data <strong>25 Ottobre 2024</strong>, è stato eletto il nuovo consiglio direttivo.
+              In data 25 Ottobre 2024, è stato eletto il nuovo consiglio direttivo.
             </p>
           </div>
         </div>
