@@ -10,6 +10,7 @@
     rgba(30, 41, 59, 0.95) 50%,
     rgba(15, 23, 42, 1) 100%
   );
+  overflow-x: hidden; /* ← FIX: Previene scroll orizzontale */
 }
 
 /* ========================================
@@ -17,18 +18,16 @@
    ======================================== */
 
 .eventi-hero {
+  padding: 10rem 0 6rem;
   position: relative;
-  background-image: url('../assets/photos/eventi.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Effetto parallax */
-  overflow: hidden;
+  overflow: hidden; /* ← FIX: Nasconde orb che escono */
 }
 
 .hero-background {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden; /* ← FIX AGGIUNTIVO */
 }
 
 .hero-gradient {
@@ -90,6 +89,51 @@
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(245, 158, 11, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 100px;
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 4px 16px rgba(245, 158, 11, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: badgeFadeIn 0.6s ease-out;
+}
+
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+  animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .hero-title {
@@ -347,7 +391,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 14px;
 }
 
 .event-card:hover .event-image {
@@ -556,6 +599,17 @@
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 2rem;
   }
+  
+  /* Ridimensiona orb per tablet */
+  .hero-orb-1 {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .hero-orb-2 {
+    width: 550px;
+    height: 550px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -588,6 +642,14 @@
   .event-content {
     padding: 1.5rem;
   }
+  
+  /* Ridimensiona orb per mobile */
+  .hero-orb-1,
+  .hero-orb-2 {
+    width: 400px;
+    height: 400px;
+    filter: blur(60px); /* Riduce blur per performance */
+  }
 }
 
 @media (max-width: 480px) {
@@ -614,5 +676,13 @@
 
   .event-title {
     font-size: 1.25rem;
+  }
+  
+  /* Orb ancora più piccoli per schermi piccoli */
+  .hero-orb-1,
+  .hero-orb-2 {
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
   }
 }
