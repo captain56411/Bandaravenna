@@ -64,7 +64,7 @@ const DiventaUnBandista: React.FC = () => {
   const instruments: Instrument[] = [
     { name: "Clarinetto", icon: "", },
     { name: "Sassofono", icon: "", },
-    { name: "Flauto", icon: "" },
+    { name: "Flauto", icon: "", urgent: true },
     { name: "Percussioni", icon: "", },
     { name: "Tromba", icon: "" },
     { name: "Trombone", icon: "" },
