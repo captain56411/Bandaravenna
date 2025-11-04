@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 
 import VideoHome from '../assets/video/provetta.mp4'
-/*
+
 import ChiSiamoImg from '../assets/photo_home/chi_siamo.jpg';
 import gallery01 from '../assets/photo_home/DSC_001.jpg';
 import gallery02 from '../assets/photo_home/DSC_002.jpg';
@@ -11,7 +11,7 @@ import gallery04 from '../assets/photo_home/DSC_004.jpg';
 import gallery05 from '../assets/photo_home/DSC_005.jpg';
 
 import bandina01 from '../assets/photo_home/Bandina01.jpg'; 
-import bandina02 from '../assets/photo_home/Bandina02.jpg'; */
+import bandina02 from '../assets/photo_home/Bandina02.jpg'; 
 
 const Home: React.FC = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -32,13 +32,13 @@ const Home: React.FC = () => {
   ];
 
   // Gallery images (placeholder - QUI ARRAY DI IMMAGINI! dopo import!)
-  /*const galleryImages = [
+  const galleryImages = [
     gallery01,
     gallery02,
     gallery03,
     gallery04,
     gallery05
-  ];*/
+  ];
 
   // Loop infinito avanti
 const handleGalleryNextLoop = () => {
