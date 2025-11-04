@@ -13,7 +13,7 @@ import gallery05 from '../assets/photo_home/DSC_005.jpg';
 import bandina01 from '../assets/photo_home/Bandina01.jpg'; 
 import bandina02 from '../assets/photo_home/Bandina02.jpg'; 
 
-//Versione 2.1.0
+//Versione 2.1.1
 
 const Home: React.FC = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
