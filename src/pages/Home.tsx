@@ -8,7 +8,6 @@ import gallery02 from '../assets/photo_home/DSC_002.jpg';
 import gallery03 from '../assets/photo_home/DSC_003.jpg';
 import gallery04 from '../assets/photo_home/DSC_004.jpg';
 import gallery05 from '../assets/photo_home/DSC_005.jpg';
-import gallery06 from '../assets/photo_home/DSC_006.jpg';
 
 import bandina01 from '../assets/photo_home/Bandina01.jpg'; 
 import bandina02 from '../assets/photo_home/Bandina02.jpg'; 
@@ -31,14 +30,13 @@ const Home: React.FC = () => {
     { year: '2025', title: 'Oggi', desc: 'La banda partecipa a molti eventi tra cui il Ravenna Festival' }
   ];
 
-  // Gallery images (placeholder - sostituisci con le tue immagini)
+  // Gallery images (placeholder - QUI ARRAY DI IMMAGINI! dopo import!)
   const galleryImages = [
     gallery01,
     gallery02,
     gallery03,
     gallery04,
-    gallery05,
-    gallery06
+    gallery05
   ];
 
   // Loop infinito avanti
